@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Founder Profile</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%2315181D%22/><text x=%2250%22 y=%2266%22 font-size=%2244%22 font-family=%22Arial%22 font-weight=%22bold%22 fill=%22%23C9962B%22 text-anchor=%22middle%22>M</text></svg>">
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html"><span class="dot"></span>Founder Name</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="ventures.html">Ventures</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn gold" href="contact.html">Get In Touch</a>
+        <button class="menu-toggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap page-head">
+    <p class="eyebrow">Get In Touch</p>
+    <h1>Contact</h1>
+    <p class="lead">Placeholder contact form — wire this up to a real email handler or messaging service when ready.</p>
+  </div>
+
+  <section class="section">
+    <div class="wrap contact-layout">
+
+      <div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-row"><label for="name">Name</label><input type="text" id="name" placeholder="Jane Doe"></div>
+          <div class="form-row"><label for="email">Email</label><input type="email" id="email" placeholder="jane@example.com"></div>
+          <div class="form-row"><label for="subject">Subject</label><input type="text" id="subject" placeholder="What's this about?"></div>
+          <div class="form-row"><label for="message">Message</label><textarea id="message" rows="6" placeholder="Write your message here"></textarea></div>
+          <button type="submit" class="btn gold full">Send Message</button>
+        </form>
+        <div class="confirm-box" id="contact-confirm" style="display:none; background:var(--white); border:1px solid var(--line); padding:36px; border-radius:6px; text-align:center;">
+          <p class="eyebrow">Message Sent</p>
+          <h2 style="margin-bottom:12px">Thank you</h2>
+          <p style="color:var(--ink-soft)">This is a placeholder confirmation. Connect this form to a real email handler to receive messages.</p>
+        </div>
+      </div>
+
+      <div class="contact-side">
+        <h3>Reach Out</h3>
+        <ul>
+          <li><strong>Email</strong>hello@mzansimoneymatters.online</li>
+          <li><strong>Phone</strong>+27 00 000 0000</li>
+          <li><strong>Location</strong>Johannesburg, South Africa</li>
+        </ul>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="LinkedIn">IN</a>
+          <a href="#" aria-label="X / Twitter">X</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="logo" href="index.html"><span class="dot"></span>Founder Name</a>
+        <nav class="main-nav" style="position:static; transform:none; flex-direction:row; padding:0; gap:24px;">
+          <a href="about.html">About</a>
+          <a href="ventures.html">Ventures</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Mzansi Money Matters. All rights reserved.</span>
+        <span>South Africa</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/profile.js"></script>
+</body>
+</html>
