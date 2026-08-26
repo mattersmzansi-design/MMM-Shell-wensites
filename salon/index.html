@@ -4,10 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MMM Salon — Hair &amp; Beauty</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23241C18%22/><text x=%2250%22 y=%2266%22 font-size=%2244%22 font-family=%22Georgia%22 fill=%22%23A8703F%22 text-anchor=%22middle%22>M</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23131318%22/><text x=%2250%22 y=%2266%22 font-size=%2244%22 font-family=%22Georgia%22 fill=%22%23B5502E%22 text-anchor=%22middle%22>M</text></svg>">
   <link rel="stylesheet" href="css/salon.css">
 </head>
 <body>
+
+  <div id="preloader">
+    <div class="pl-caption">
+      <div>Hair &amp; Beauty<br>Studio</div>
+      <div class="div"></div>
+      <div>Based in Johannesburg<br>Est. 2026</div>
+    </div>
+    <div class="pl-pct">0%</div>
+  </div>
 
   <div class="announce">Now booking for September — walk-ins welcome on weekdays</div>
 
@@ -29,9 +38,13 @@
   </header>
 
   <section class="hero">
-    <div class="hero-media">Hero photograph placeholder</div>
     <div class="wrap">
-      <div class="hero-content">
+      <div class="hero-caption-row">
+        <div>Hair &amp; Beauty<br>Studio</div>
+        <div class="div"></div>
+        <div>Cuts · Colour<br>Braids · Treatments</div>
+      </div>
+      <div class="hero-grid">
         <p class="eyebrow">Est. 2026 — Kasi Grown</p>
         <h1>Hair &amp; beauty, done with care.</h1>
         <p>MMM Salon is a placeholder shell for a full-service hair and beauty studio — cuts, colour, braids and treatments. Replace this copy with your real story once content is ready.</p>
@@ -40,6 +53,10 @@
           <a class="btn ghost" href="services.html">View Services</a>
         </div>
       </div>
+      <div class="float-card fc1"><div class="ph">Photo</div></div>
+      <div class="float-card fc2"><div class="ph">Photo</div></div>
+      <div class="float-card fc3"><div class="ph">Photo</div></div>
+      <div class="float-card fc4"><div class="ph">Photo</div></div>
     </div>
   </section>
 
@@ -131,42 +148,43 @@
   </section>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a class="logo" href="index.html">MMM Salon<span class="sub">Hair &amp; Beauty Studio</span></a>
-          <p>Placeholder brand description for MMM Salon, part of the Mzansi Money Matters family of businesses.</p>
-        </div>
-        <div>
-          <h5>Explore</h5>
-          <ul>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="booking.html">Book Now</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5>Contact</h5>
-          <ul>
-            <li>Placeholder Street Address</li>
-            <li>Johannesburg, South Africa</li>
-            <li>+27 00 000 0000</li>
-          </ul>
-        </div>
-        <div>
-          <h5>Hours</h5>
-          <ul>
-            <li>Mon – Fri: 08:00 – 18:00</li>
-            <li>Saturday: 08:00 – 15:00</li>
-            <li>Sunday: Closed</li>
-          </ul>
-        </div>
+    <div class="wrap footer-top">
+      <div class="col" style="max-width:280px;">
+        <a class="logo" href="index.html">MMM Salon<span class="sub">Hair &amp; Beauty Studio</span></a>
+        <p style="font-size:13px; color:var(--ink-soft); margin-top:14px;">Placeholder brand description for MMM Salon, part of the Mzansi Money Matters family of businesses.</p>
       </div>
-      <div class="footer-bottom">
-        <span>© 2026 MMM Salon. All rights reserved.</span>
-        <span>Part of Mzansi Money Matters</span>
+      <div class="col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+        </ul>
       </div>
+      <div class="col">
+        <h5>Contact</h5>
+        <ul>
+          <li>Placeholder Street Address</li>
+          <li>Johannesburg, South Africa</li>
+          <li>+27 00 000 0000</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h5>Hours</h5>
+        <ul>
+          <li>Mon – Fri: 08:00 – 18:00</li>
+          <li>Saturday: 08:00 – 15:00</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-mark wrap">
+      <span>MMM</span><span>Salon</span>
+    </div>
+    <div class="footer-bottom wrap">
+      <span>© 2026 MMM Salon. All rights reserved.</span>
+      <span>Part of Mzansi Money Matters</span>
     </div>
   </footer>
 
