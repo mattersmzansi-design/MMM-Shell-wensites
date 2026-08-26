@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservations — MMM Restaurants</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230D0D0F%22/><text x=%2250%22 y=%2266%22 font-size=%2244%22 font-family=%22Arial%22 font-weight=%22bold%22 fill=%22%23C8FF3D%22 text-anchor=%22middle%22>M</text></svg>">
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html">MMM RESTAURANTS<span class="sub">Kasi Kitchen</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="reservations.html" class="active">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn" href="reservations.html">Reserve a Table</a>
+        <button class="menu-toggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap page-head">
+    <p class="eyebrow">Get In Touch</p>
+    <h1>Reserve a Table</h1>
+    <p class="lead">Placeholder reservation form — wire this up to a real booking system or contact form handler when ready.</p>
+  </div>
+
+  <section class="section">
+    <div class="wrap res-layout">
+
+      <div>
+        <form class="res-form" id="reservation-form">
+          <div class="form-grid-2">
+            <div class="form-row"><label for="fname">First Name</label><input type="text" id="fname" placeholder="Jane"></div>
+            <div class="form-row"><label for="lname">Last Name</label><input type="text" id="lname" placeholder="Doe"></div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-row"><label for="email">Email</label><input type="email" id="email" placeholder="jane@example.com"></div>
+            <div class="form-row"><label for="phone">Phone</label><input type="tel" id="phone" placeholder="+27 00 000 0000"></div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-row"><label for="guests">Guests</label>
+              <select id="guests">
+                <option>1 Guest</option><option>2 Guests</option><option>3 Guests</option><option>4 Guests</option><option>5+ Guests</option>
+              </select>
+            </div>
+            <div class="form-row"><label for="occasion">Occasion</label>
+              <select id="occasion">
+                <option>Just Dining</option><option>Birthday</option><option>Anniversary</option><option>Business</option><option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-row"><label for="date">Date</label><input type="date" id="date"></div>
+            <div class="form-row"><label for="time">Time</label><input type="time" id="time"></div>
+          </div>
+          <div class="form-row"><label for="notes">Notes</label><textarea id="notes" rows="4" placeholder="Anything we should know"></textarea></div>
+          <button type="submit" class="btn full">Request Reservation</button>
+        </form>
+
+        <div class="confirm-box" id="reservation-confirm" style="display:none; background:var(--paper-alt); border:1px solid var(--line); padding:36px; text-align:center;">
+          <p class="eyebrow">Request Sent</p>
+          <h2 style="margin-bottom:12px">Thank you</h2>
+          <p style="color:var(--ink-soft); text-transform:none;">This is a placeholder confirmation. Connect this form to a real booking system to receive requests.</p>
+        </div>
+      </div>
+
+      <div class="res-side">
+        <h3>Visit Us</h3>
+        <ul>
+          <li><strong>Address</strong>Placeholder Street Address, Johannesburg, South Africa</li>
+          <li><strong>Phone</strong>+27 00 000 0000</li>
+          <li><strong>Email</strong>hello@mmmrestaurants.mzansimoneymatters.online</li>
+          <li><strong>Hours</strong>Mon – Sun 11:00–22:00 · Kitchen closes 21:30</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap"><div class="map-placeholder">Map placeholder</div></div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">MMM RESTAURANTS<span class="sub">Kasi Kitchen</span></a>
+          <p>Placeholder brand description for MMM Restaurants, part of the Mzansi Money Matters family of businesses.</p>
+        </div>
+        <div>
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="reservations.html">Reserve</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <ul>
+            <li>Placeholder Street Address</li>
+            <li>Johannesburg, South Africa</li>
+            <li>+27 00 000 0000</li>
+          </ul>
+        </div>
+        <div>
+          <h5>Hours</h5>
+          <ul>
+            <li>Mon – Sun: 11:00 – 22:00</li>
+            <li>Kitchen closes 21:30</li>
+            <li>Public Holidays: Open</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 MMM Restaurants. All rights reserved.</span>
+        <span>Style: Township Neon Night</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>

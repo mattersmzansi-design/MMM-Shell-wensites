@@ -3,150 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MMM Restaurants — Kasi Kitchen</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%231C1815%22/><text x=%2250%22 y=%2266%22 font-size=%2244%22 font-family=%22Georgia%22 fill=%22%23B23A2E%22 text-anchor=%22middle%22>M</text></svg>">
-  <link rel="stylesheet" href="css/restaurant.css">
+  <title>MMM Restaurants — Choose a Style</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23101820%22/><text x=%2250%22 y=%2266%22 font-size=%2244%22 font-family=%22Georgia%22 fill=%22%23D9A441%22 text-anchor=%22middle%22>M</text></svg>">
+  <style>
+    *{box-sizing:border-box; margin:0; padding:0;}
+    body{
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background:#101820; color:#F4EFE6; min-height:100vh;
+      display:flex; align-items:center; justify-content:center; padding:40px 20px;
+    }
+    .wrap{ max-width:920px; width:100%; }
+    .eyebrow{ font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#D9A441; margin-bottom:14px; text-align:center; }
+    h1{ font-size:30px; text-align:center; margin-bottom:10px; font-weight:700; }
+    .lead{ text-align:center; color:rgba(244,239,230,0.65); margin-bottom:48px; font-size:15px; }
+    .grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
+    .card{ display:block; border-radius:8px; overflow:hidden; text-decoration:none; color:inherit; border:1px solid rgba(255,255,255,0.1); transition: transform .15s, border-color .15s; }
+    .card:hover{ transform: translateY(-3px); border-color:#D9A441; }
+    .swatch{ height:120px; display:flex; align-items:center; justify-content:center; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; }
+    .swatch.bold{ background:#FBF4EC; color:#17130F; }
+    .swatch.bold .chip{ background:#E8511F; width:40px; height:40px; }
+    .swatch.editorial{ background:#F4ECDD; color:#2B2318; }
+    .swatch.editorial .chip{ background:#A85C34; width:40px; height:40px; border-radius:50%; }
+    .swatch.neon{ background:#0D0D0F; color:#F2F0EC; }
+    .swatch.neon .chip{ background:#C8FF3D; width:40px; height:4px; }
+    .card-body{ padding:18px 20px; background: rgba(255,255,255,0.04); }
+    .card-body h3{ font-size:16px; margin-bottom:6px; }
+    .card-body p{ font-size:13px; color:rgba(244,239,230,0.6); }
+  </style>
 </head>
 <body>
-
-  <div class="announce">Open daily 11:00 – 22:00 — booking recommended on weekends</div>
-
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="logo" href="index.html">MMM Restaurants<span class="sub">Kasi Kitchen</span></a>
-      <nav class="main-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="about.html">About</a>
-        <a href="reservations.html">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <a class="btn" href="reservations.html">Reserve a Table</a>
-        <button class="menu-toggle" aria-label="Menu">☰</button>
-      </div>
+  <div class="wrap">
+    <p class="eyebrow">MMM Restaurants</p>
+    <h1>Choose a Style</h1>
+    <p class="lead">Three visual directions for the same business — pick whichever fits, or keep this page to compare.</p>
+    <div class="grid">
+      <a class="card" href="bold/index.html">
+        <div class="swatch bold"><div class="chip"></div></div>
+        <div class="card-body"><h3>Braai House Bold</h3><p>Maximalist, flat colour, huge type</p></div>
+      </a>
+      <a class="card" href="editorial/index.html">
+        <div class="swatch editorial"><div class="chip"></div></div>
+        <div class="card-body"><h3>Shisanyama Editorial</h3><p>Refined, warm, generous whitespace</p></div>
+      </a>
+      <a class="card" href="neon/index.html">
+        <div class="swatch neon"><div class="chip"></div></div>
+        <div class="card-body"><h3>Township Neon Night</h3><p>Dark, neon accent, nightlife energy</p></div>
+      </a>
     </div>
-  </header>
-
-  <section class="hero">
-    <div class="hero-media">Hero photograph placeholder</div>
-    <div class="wrap">
-      <div class="hero-content">
-        <p class="eyebrow">Est. 2026 — Kasi Grown</p>
-        <h1>Food that tells <span class="script">our story</span>.</h1>
-        <p>MMM Restaurants is a placeholder shell for a kasi-rooted kitchen serving food with soul. Replace this copy with your real story once content is ready.</p>
-        <div class="hero-actions">
-          <a class="btn" href="reservations.html">Reserve a Table</a>
-          <a class="btn ghost" style="color:#fff; border-color:rgba(255,255,255,0.4)" href="menu.html">View Menu</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">From The Kitchen</p>
-          <h2 class="section-title">Signature Dishes</h2>
-        </div>
-        <a class="btn ghost" href="menu.html">Full Menu</a>
-      </div>
-      <div class="menu-grid">
-        <div class="menu-item">
-          <div><div class="name">Dish Name One</div><div class="desc">Placeholder description of the dish, key ingredients and preparation.</div></div>
-          <div class="price">R 145</div>
-        </div>
-        <div class="menu-item">
-          <div><div class="name">Dish Name Two</div><div class="desc">Placeholder description of the dish, key ingredients and preparation.</div></div>
-          <div class="price">R 165</div>
-        </div>
-        <div class="menu-item">
-          <div><div class="name">Dish Name Three</div><div class="desc">Placeholder description of the dish, key ingredients and preparation.</div></div>
-          <div class="price">R 120</div>
-        </div>
-        <div class="menu-item">
-          <div><div class="name">Dish Name Four</div><div class="desc">Placeholder description of the dish, key ingredients and preparation.</div></div>
-          <div class="price">R 180</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="stat-strip">
-    <div><strong>10+</strong><span>Years Experience</span></div>
-    <div><strong>40+</strong><span>Dishes on Menu</span></div>
-    <div><strong>5,000+</strong><span>Diners Served</span></div>
-    <div><strong>4.8★</strong><span>Average Rating</span></div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="wrap split">
-      <div class="img-box" style="background: var(--paper-alt); display:flex; align-items:center; justify-content:center; color: rgba(28,24,21,0.4); font-size:12px; letter-spacing:0.08em; text-transform:uppercase;">Kitchen photograph placeholder</div>
-      <div>
-        <p class="eyebrow">Our Kitchen</p>
-        <h2 class="section-title" style="margin-bottom:18px">Made fresh, served with pride</h2>
-        <p style="color:var(--ink-soft); margin-bottom:16px">Placeholder paragraph about the kitchen's approach to food and hospitality. Replace with the real story.</p>
-        <a class="btn dark" href="about.html">Learn More</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap testimonial">
-      <p>"Placeholder testimonial quote — replace with a real customer review once available."</p>
-      <span>— Customer Name, Customer Surname</span>
-    </div>
-  </section>
-
-  <section class="cta-band">
-    <div class="wrap">
-      <h2>Hungry already?</h2>
-      <p>Placeholder call-to-action copy encouraging visitors to reserve a table.</p>
-      <a class="btn" href="reservations.html">Reserve a Table</a>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a class="logo" href="index.html">MMM Restaurants<span class="sub">Kasi Kitchen</span></a>
-          <p>Placeholder brand description for MMM Restaurants, part of the Mzansi Money Matters family of businesses.</p>
-        </div>
-        <div>
-          <h5>Explore</h5>
-          <ul>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="reservations.html">Reserve</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5>Contact</h5>
-          <ul>
-            <li>Placeholder Street Address</li>
-            <li>Johannesburg, South Africa</li>
-            <li>+27 00 000 0000</li>
-          </ul>
-        </div>
-        <div>
-          <h5>Hours</h5>
-          <ul>
-            <li>Mon – Sun: 11:00 – 22:00</li>
-            <li>Kitchen closes 21:30</li>
-            <li>Public Holidays: Open</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 MMM Restaurants. All rights reserved.</span>
-        <span>Part of Mzansi Money Matters</span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/restaurant.js"></script>
+  </div>
 </body>
 </html>
