@@ -58,6 +58,21 @@
     }
     .tag.live{ background:rgba(217,164,65,0.18); color:#D9A441; }
     .tag.soon{ background:rgba(255,255,255,0.08); color:rgba(244,239,230,0.5); }
+    .brave-banner{
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      background:#FB542B; color:#fff;
+      border-radius:6px; padding:16px 20px; margin-bottom:28px;
+      text-decoration:none; flex-wrap:wrap;
+      transition: filter .15s;
+    }
+    .brave-banner:hover{ filter:brightness(1.06); }
+    .brave-banner .bb-text strong{ display:block; font-size:14px; margin-bottom:2px; }
+    .brave-banner .bb-text span{ font-size:12px; color:rgba(255,255,255,0.85); }
+    .brave-banner .bb-cta{
+      background:#fff; color:#FB542B; font-size:12px; font-weight:700;
+      letter-spacing:0.04em; text-transform:uppercase;
+      padding:8px 16px; border-radius:20px; white-space:nowrap;
+    }
     @media (max-width:600px){ .grid{ grid-template-columns:1fr; } }
   </style>
 </head>
@@ -66,6 +81,10 @@
     <p class="eyebrow">Mzansi Money Matters</p>
     <h1>Our Businesses</h1>
     <p class="lead">One family of businesses, kasi to the world.</p>
+    <a class="brave-banner" href="https://brave.com/download/" target="_blank" rel="noopener sponsored">
+      <span class="bb-text"><strong>Browse faster. Block ads. Stay private.</strong><span>Get the Brave Browser — free, one click.</span></span>
+      <span class="bb-cta">Download Brave</span>
+    </a>
     <div class="grid">
       <a class="card live" href="salon/index.html">
         <h3>MMM Salon</h3>
