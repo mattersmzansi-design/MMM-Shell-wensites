@@ -73,6 +73,41 @@
       letter-spacing:0.04em; text-transform:uppercase;
       padding:8px 16px; border-radius:20px; white-space:nowrap;
     }
+    .demo-video-block{
+      background: rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:6px;
+      padding:20px;
+      margin-bottom:28px;
+    }
+    .demo-video-block h2{
+      font-size:16px; margin-bottom:6px;
+    }
+    .demo-video-block .demo-lead{
+      font-size:13px; color:rgba(244,239,230,0.6); margin-bottom:14px;
+    }
+    /* 1080/1124 is the recording's own ratio, not an arbitrary crop — the
+       frame scales with the viewport and never needs a fixed pixel height. */
+    .demo-video-frame{
+      aspect-ratio: 1080 / 1124;
+      background:#000;
+      border-radius:6px;
+      margin-bottom:14px;
+    }
+    .demo-video-frame video{
+      display:block; width:100%; height:100%;
+      border-radius:6px;
+    }
+    .demo-caption{
+      font-size:12px; color:rgba(244,239,230,0.55); margin-bottom:14px;
+    }
+    .demo-video-block h3{
+      font-size:13px; color:#D9A441; text-transform:uppercase;
+      letter-spacing:0.06em; margin-bottom:6px;
+    }
+    .demo-video-block .demo-summary{
+      font-size:13px; color:rgba(244,239,230,0.7); line-height:1.6;
+    }
     @media (max-width:600px){ .grid{ grid-template-columns:1fr; } }
   </style>
 </head>
@@ -85,6 +120,20 @@
       <span class="bb-text"><strong>Browse faster. Block ads. Stay private.</strong><span>Get the Brave Browser — free, one click.</span></span>
       <span class="bb-cta">Download Brave</span>
     </a>
+
+    <section class="demo-video-block" aria-labelledby="demo-video-heading">
+      <h2 id="demo-video-heading">Watch the demonstration</h2>
+      <p class="demo-lead">A recording of our new loan application demo, screen by screen.</p>
+      <div class="demo-video-frame">
+        <video controls preload="none" poster="media/mzansi-demo-poster.jpg" aria-label="A recorded screen walkthrough of the demonstration loan application, three minutes twenty-six seconds long, with music">
+          <source src="media/mzansi-demo.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p class="demo-caption">This is a recording of a product still in development, not a live service. Nobody shown in it is a registered credit provider, and no application in it was real.</p>
+      <h3>What the video shows, in words</h3>
+      <p class="demo-summary">It starts on the application's landing page: who the demonstration lender is, and a real cost example worked out for a sample loan. It then opens the consent screen, where checking your bank details, verifying your ID photo and sharing information with the app's providers are each their own separate, unticked box, not one "I agree to everything." It ends on the identity screen, entering a name and South African ID number, including what a consumer sees when that ID number does not check out: a plain-language error next to the field, not a generic one.</p>
+    </section>
+
     <div class="grid">
       <a class="card live" href="salon/index.html">
         <h3>MMM Salon</h3>
