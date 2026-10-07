@@ -5,6 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mzansi Money Matters — Our Businesses</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23101820%22/><text x=%2250%22 y=%2266%22 font-size=%2244%22 font-family=%22Georgia%22 fill=%22%23D9A441%22 text-anchor=%22middle%22>M</text></svg>">
+  <script>
+    /*
+     * Picks one of 7 accent themes by the current UTC day — no server, no
+     * build step, no cron job. Every visitor on the same calendar day (UTC)
+     * sees the same theme, and it changes on its own at UTC midnight because
+     * the date itself changes. Runs synchronously, before the stylesheet
+     * paints anything, so there is no flash of the wrong theme.
+     * "gold" is first on purpose: it needs no [data-theme] override (see the
+     * :root block below), so if this script ever fails to run the page still
+     * renders correctly in the original theme rather than unstyled.
+     */
+    (function () {
+      var THEMES = ['gold', 'mint', 'sky', 'violet', 'coral', 'rose', 'lime'];
+      var dayIndex = Math.floor(Date.now() / 86400000) % THEMES.length;
+      var theme = THEMES[dayIndex];
+      if (theme !== 'gold') document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
   <style>
     @font-face{
       font-family:'Inter';
@@ -13,6 +31,22 @@
       src: local('Inter');
     }
     *{box-sizing:border-box; margin:0; padding:0;}
+    /*
+     * The one thing that changes between daily themes: --accent. Everything
+     * that used to reference #D9A441 or rgba(217,164,65,…) now reads this
+     * variable instead, so a new theme is one block below, not a find-replace
+     * across the file. Background and text stay put in every theme — only the
+     * accent hue moves — which is what keeps every theme at the same
+     * contrast ratio the gold original had (checked: all 7 clear 5.5:1 on
+     * #101820, well past the 4.5:1 small-text floor).
+     */
+    :root{ --accent:#D9A441; }
+    html[data-theme="mint"]  { --accent:#3FBF9B; }
+    html[data-theme="sky"]   { --accent:#4FA8E0; }
+    html[data-theme="violet"]{ --accent:#B98CE0; }
+    html[data-theme="coral"] { --accent:#E8805A; }
+    html[data-theme="rose"]  { --accent:#E06A95; }
+    html[data-theme="lime"]  { --accent:#A9C53F; }
     body{
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
       background:#101820;
@@ -24,7 +58,7 @@
     .wrap{ max-width:760px; width:100%; }
     .eyebrow{
       font-size:12px; letter-spacing:0.2em; text-transform:uppercase;
-      color:#D9A441; margin-bottom:14px; text-align:center;
+      color:var(--accent); margin-bottom:14px; text-align:center;
     }
     h1{
       font-size:32px; text-align:center; margin-bottom:10px; font-weight:700;
@@ -48,7 +82,7 @@
       color:inherit;
       transition: border-color .15s, background .15s;
     }
-    .card.live:hover{ border-color:#D9A441; background: rgba(217,164,65,0.08); }
+    .card.live:hover{ border-color:var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); }
     .card.soon{ opacity:0.5; cursor:default; }
     .card h3{ font-size:18px; margin-bottom:6px; }
     .card p{ font-size:13px; color:rgba(244,239,230,0.6); }
@@ -56,7 +90,7 @@
       display:inline-block; font-size:10px; letter-spacing:0.08em; text-transform:uppercase;
       margin-top:14px; padding:4px 10px; border-radius:20px;
     }
-    .tag.live{ background:rgba(217,164,65,0.18); color:#D9A441; }
+    .tag.live{ background:color-mix(in srgb, var(--accent) 18%, transparent); color:var(--accent); }
     .tag.soon{ background:rgba(255,255,255,0.08); color:rgba(244,239,230,0.5); }
     .brave-banner{
       display:flex; align-items:center; justify-content:space-between; gap:16px;
@@ -102,7 +136,7 @@
       font-size:12px; color:rgba(244,239,230,0.55); margin-bottom:14px;
     }
     .demo-video-block h3{
-      font-size:13px; color:#D9A441; text-transform:uppercase;
+      font-size:13px; color:var(--accent); text-transform:uppercase;
       letter-spacing:0.06em; margin-bottom:6px;
     }
     .demo-video-block .demo-summary{
